@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<% include headerStuff %>
+</head>
+<body>
+<% include pageHeader %>
+
+<p><%= note ? note.body : "" %></p>
+<p>Item Name: <%= notekey %> (<%= note.title%>)</p>
+<p>Price: $150.00</p>
+<% if (notekey) { %>
+    <hr/>
+    <p><a href="/notes/destroy?key=<%= notekey %>">Delete</a>
+     | <a href="/notes/edit?key=<%= notekey %>">Edit</a></p>
+<% } %>
+<% include footer %>
+</body>
+</html>

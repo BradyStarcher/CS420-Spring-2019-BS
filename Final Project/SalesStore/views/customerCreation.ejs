@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<% include headerStuff %>
+</head>
+<body>
+<% include pageHeader %>
+<form method='POST' action='/customer/saveCustomer'>
+<input type='hidden' name='docreate' value='<%= docreate ? "create" : "update"%>'>
+<p>First Name: <input type='text' name='customer' value='<%=  %>' /></p>
+<p>Last Name: <input type='text' name='customer' value='<%=  %>' /></p>
+<p>Street Address: <input type='text' name='customer' value='<%=  %>' /></p>
+<p>City: <input type='text' name='customer' value='<%=  %>' /></p>
+<p>State: <input type='text' name='customer' value='<%=  %>' /></p>
+<p>Zip Code: <input type='text' name='customer' value='<%= %>' /></p>
+<p>Phone Number: <input type='text' name='customer' value='<%= %>' /></p>
+<br/>
+<br/><input type='submit' value='Submit' />
+</form>
+<% include footer %>
+</body>
+</html>
